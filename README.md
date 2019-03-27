@@ -80,6 +80,10 @@ $ sbt
 - `excludeRootProject` : This plugin derives project-diff based on project's base directory. Since root project's base directory-path is included to any project's, excluding root project from diff is reasonable. `true` by default.
 - `patternsAffectAllProjects` : For some special files, you would want to force testing all projects if the file is modified. (e.g. `.travis.yml`, `circle.yml`, `build.sbt`, ...) `Seq(""".+\.sbt$""", """.+project/[^/]+\.scala""")` by default.
 
+## Contributors
+
+This project is a fork of [sbt-diff-project](https://github.com/opt-tech/sbt-diff-project) by [M1 Finance](https://m1finance.com) intended to be published to Central, along with some code improvements to better detect diffs.
+
 ## License
 
 Published under the MIT License.

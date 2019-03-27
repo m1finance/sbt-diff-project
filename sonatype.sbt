@@ -1,15 +1,15 @@
-sonatypeProfileName := "jp.ne.opt"
+publishMavenStyle := true
 
-pomExtra in Global := {
-  <url>https://github.com/opt-tech/sbt-diff-project</url>
-    <scm>
-      <connection>"scm:git:git@github.com:opt-tech/sbt-diff-project.git"</connection>
-      <url>git@github.com:opt-tech/sbt-diff-project.git</url>
-    </scm>
-    <developers>
-      <developer>
-        <id>ocadaruma</id>
-        <name>Haruki Okada</name>
-      </developer>
-    </developers>
-}
+licenses := Seq("MIT" -> url("https://raw.githubusercontent.com/m1finance/sbt-diff-project/master/LICENSE"))
+
+import xerial.sbt.Sonatype._
+sonatypeProjectHosting := Some(GitHubHosting("m1finance", "sbt-diff-project", "j.symonds@m1finance.com"))
+
+scmInfo := Some(
+  ScmInfo(
+    url("https://github.com/m1finance/sbt-diff-project"),
+    "scm:git@github.com:m1finance/sbt-diff-project.git"
+  )
+)
+
+homepage := Some(url("https://github.com/m1finance/sbt-diff-project"))
